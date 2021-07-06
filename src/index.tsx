@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "react-dom";
 import { App } from "./App";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter, BrowserRouter } from "react-router-dom";
 render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
+  <HashRouter>
+    <App />
+  </HashRouter>,
   document.getElementById("root")
 );
