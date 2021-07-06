@@ -7,5 +7,10 @@
 }
 body {
   font-family: "shadows into light";
-  background: radial-gradient(white 40%, #ffdee4);
+  background: url("assets/image/scenery.jpeg") no-repeat center;
+  background-size: contain;
+  color: white;
+  a {
+    color: white;
+  }
 }
