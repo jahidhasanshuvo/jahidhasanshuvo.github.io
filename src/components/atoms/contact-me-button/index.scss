@@ -1,0 +1,46 @@
+$color: #00eeff;
+.a-hero-technical-skill {
+  width: fit-content;
+  padding: 15px 70px;
+  border-radius: 80px;
+  text-decoration: none;
+  display: block;
+  color: #86e2e9;
+  position: relative;
+  background: linear-gradient(120deg, #117268 60%, rgba(white, 0.2), #117268);
+  background-size: 200%;
+  background-position: 0%;
+  z-index: 1;
+  transition: all 0.5s;
+  &::after {
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    border-radius: 50%;
+    height: 0;
+    width: 0;
+    opacity: 1;
+    animation: animate 1.2s ease-out infinite;
+    border: 10px solid #117268;
+  }
+  &:hover {
+    transform: scale(1.1);
+    letter-spacing: 0.2rem;
+    box-shadow: 20px 20px 20px rgba(black, 0.2);
+    background-position: 200%;
+    &::after {
+      animation: none;
+    }
+  }
+}
+@keyframes animate {
+  to {
+    height: 200px;
+    width: 200px;
+    opacity: 0.2;
+    border: 5px solid #117268;
+  }
+}

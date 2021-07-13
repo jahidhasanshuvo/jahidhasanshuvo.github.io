@@ -52,7 +52,7 @@ module.exports = {
         exclude: /\.module\.scss$/,
       },
       {
-        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+        test: /\.(jpg|jpeg|png|gif|mp3|mp4|svg)$/,
         use: ["file-loader"],
       },
     ],
