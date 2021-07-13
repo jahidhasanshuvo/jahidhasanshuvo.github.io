@@ -6,7 +6,7 @@ type ContactMeProps = {
 
 const ContactMe: React.FC<ContactMeProps> = ({ children }) => {
   return (
-    <a className="a-hero-technical-skill" href="#">
+    <a className="a-contact-me" href="#">
       {children}
     </a>
   );
