@@ -3,8 +3,8 @@ import { render } from "react-dom";
 import { App } from "./App";
 import { HashRouter, BrowserRouter } from "react-router-dom";
 render(
-  <HashRouter>
+  <BrowserRouter>
     <App />
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
