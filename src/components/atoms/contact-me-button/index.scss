@@ -25,6 +25,7 @@ $color: #00eeff;
     opacity: 1;
     animation: animate 1.2s ease-out infinite;
     border: 10px solid #117268;
+    pointer-events: none;
   }
   &:hover {
     transform: scale(1.1);
