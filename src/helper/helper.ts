@@ -38,3 +38,23 @@ export function ThreeDAnimation(target: HTMLElement, value: number = 25) {
     cleanUp,
   };
 }
+
+export type ModifiersProp<M extends string> = M | M[];
+export type modifiersType = string[] | string | undefined;
+export function mapModifiers(
+  baseClass: string,
+  modifiers: modifiersType,
+  classname?: string
+) {
+  let finalClassName = baseClass;
+  if (Array.isArray(modifiers)) {
+    let modifiersArray = modifiers.map((item) => baseClass + "--" + item);
+    finalClassName += " " + modifiersArray.join(" ");
+  } else if (modifiers) {
+    finalClassName += " " + baseClass + "--" + modifiers;
+  }
+  if (classname) {
+    finalClassName += " " + classname;
+  }
+  return finalClassName;
+}

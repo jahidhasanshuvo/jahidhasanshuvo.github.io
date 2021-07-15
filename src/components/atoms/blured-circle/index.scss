@@ -1,0 +1,31 @@
+.a-blured-circle {
+  position: absolute;
+  border-radius: 50%;
+  backdrop-filter: blur(15px);
+  --webkit-backdrop-filter: blur(15px);
+  height: 140px;
+  width: 140px;
+  background: linear-gradient(110deg, rgba(white, 0.2), rgba(white, 0));
+  box-shadow: inset 0px 2px 10px rgba(white, 0.8);
+  z-index: 1;
+  &--rectangle {
+    border-radius: 30px;
+    transform: rotate(45deg);
+  }
+  &--large {
+    height: 180px;
+    width: 180px;
+  }
+  &--medium {
+    height: 100px;
+    width: 100px;
+  }
+  &--small {
+    height: 45px;
+    width: 45px;
+  }
+  // work letter
+  &--doughnut {
+    background: radial-gradient(rgba(white, 0.5) 0%, rgba(white, 0));
+  }
+}

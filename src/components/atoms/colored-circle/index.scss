@@ -1,0 +1,25 @@
+.a-colored-circle {
+  position: absolute;
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;
+  background: rgb(83, 196, 149);
+  &--medium {
+    height: 80px;
+    width: 80px;
+  }
+  &--small {
+    height: 60px;
+    width: 60px;
+  }
+  &--extra-small {
+    height: 30px;
+    width: 30px;
+  }
+  &--violet {
+    background: linear-gradient(360deg, rgb(103, 80, 201), rgb(199, 134, 230));
+  }
+  &--blue {
+    background: linear-gradient(0deg, rgb(67, 141, 211), rgb(80, 160, 235));
+  }
+}
