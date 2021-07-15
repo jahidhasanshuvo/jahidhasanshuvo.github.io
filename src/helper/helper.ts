@@ -1,3 +1,71 @@
+type MoveAnimationTargetProps = {
+  item: HTMLElement;
+  speed: number;
+};
+export function MoveAnimation(
+  surface: HTMLElement,
+  value: number = 25,
+  targets: MoveAnimationTargetProps[]
+) {
+  const mouseMove = () => {
+    surface.addEventListener("mousemove", function (event: MouseEvent) {
+      [...targets].map(({ item, speed }, index) => {
+        let target = item as HTMLElement;
+        if (target.style.transition == "all 1000ms ease 0s") {
+          setTimeout(() => {
+            target.style.transition = "none";
+          }, 1000);
+        }
+      });
+
+      let yAxisValue =
+        -(surface.offsetHeight / 2 - (event.clientY - surface.offsetTop)) /
+        value;
+      let xAxisValue =
+        -(surface.offsetWidth / 2 - (event.clientX - surface.offsetLeft)) /
+        value;
+
+      targets.map(({ item, speed }, index) => {
+        let target = item as HTMLElement;
+        target.style.transform = `translate(${xAxisValue * speed}px,${
+          yAxisValue * speed
+        }px)`;
+      });
+    });
+  };
+  const mouseEnter = () => {
+    surface?.addEventListener("mouseenter", function () {
+      targets.map(({ item, speed }, index) => {
+        let target = item as HTMLElement;
+        target.style.transition = "all 1000ms";
+      });
+    });
+  };
+  const mouseLeave = () => {
+    surface?.addEventListener("mouseleave", function () {
+      targets.map(({ item, speed }, index) => {
+        let target = item as HTMLElement;
+        target.style.transition = "all 1000ms";
+        target.style.transform = "translate(0px,0px)";
+      });
+    });
+  };
+  const execute = () => {
+    mouseEnter();
+    mouseMove();
+    mouseLeave();
+  };
+  const cleanUp = () => {
+    surface.removeEventListener("mousemove", mouseMove);
+    surface.removeEventListener("mouseenter", mouseEnter);
+    surface.removeEventListener("mouseleave", mouseLeave);
+  };
+  return {
+    execute,
+    cleanUp,
+  };
+}
+
 export function ThreeDAnimation(target: HTMLElement, value: number = 25) {
   const mouseMove = () => {
     target.addEventListener("mousemove", function (event: MouseEvent) {
@@ -31,6 +99,7 @@ export function ThreeDAnimation(target: HTMLElement, value: number = 25) {
   };
   const cleanUp = () => {
     target.removeEventListener("mousemove", mouseMove);
+    target.removeEventListener("mouseenter", mouseEnter);
     target.removeEventListener("mouseleave", mouseLeave);
   };
   return {

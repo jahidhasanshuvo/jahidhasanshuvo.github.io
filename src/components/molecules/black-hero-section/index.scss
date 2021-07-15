@@ -24,18 +24,18 @@
     #{$root}__name {
       color: transparent;
       font-size: 60px;
-      letter-spacing: 12px;
+      letter-spacing: 08px;
       margin-bottom: 10px;
       transition: all 0.5s;
       background: linear-gradient(
         80deg,
         rgb(0, 140, 255),
-        yellow,
+        rgb(212, 212, 9),
         rgb(151, 10, 144),
         green,
         white
       );
-      background-size: 400%;
+      background-size: 500%;
       background-position: 0;
       background-clip: text;
       -webkit-background-clip: text;
