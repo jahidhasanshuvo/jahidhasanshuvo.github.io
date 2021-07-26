@@ -1,0 +1,11 @@
+.m-header {
+  height: 60px;
+  position: relative;
+  padding-top: 20px;
+  background: rgba($white, 0.15);
+  backdrop-filter: blur(9px);
+  text-align: right;
+  > .a-nav-item {
+    margin-right: 20px;
+  }
+}

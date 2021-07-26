@@ -1,0 +1,17 @@
+@mixin setFont(
+  $fontSize: false,
+  $lineHeight: false,
+  $fontWeight: false,
+  $fontFamily: $roboto
+) {
+  @if ($fontSize) {
+    font-size: $fontSize + px;
+  }
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  }
+  @if ($fontWeight) {
+    font-weight: $fontWeight;
+  }
+  font-family: $fontFamily;
+}
