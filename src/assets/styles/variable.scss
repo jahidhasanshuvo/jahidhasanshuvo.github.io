@@ -1,0 +1,11 @@
+$WIDTH-SP: 720px;
+:root {
+  --font18: 18px;
+  --font16: 16px;
+  @media (max-width: $WIDTH-SP) {
+    --font18: 16px;
+    --font16: 14px;
+  }
+}
+
+$white: #fff;
