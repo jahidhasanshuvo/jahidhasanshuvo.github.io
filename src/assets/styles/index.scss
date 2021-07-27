@@ -1,6 +1,6 @@
 @import "variable.scss";
-@import "font.scss";
 @import "mixin.scss";
+@import "font.scss";
 @import "../../pages/**/*.scss";
 @import "../../components/**/**/*.scss";
 * {
@@ -11,4 +11,5 @@
 body {
   position: relative;
   background: url("assets/image/bg.svg");
+  background-attachment: fixed;
 }

@@ -1,0 +1,46 @@
+.o-hero-section {
+  $root: &;
+  position: relative;
+  &__moon {
+    $moonHeight: clamp(90px, 15vw, 180px);
+    position: absolute;
+    height: $moonHeight;
+    width: $moonHeight;
+    background: $white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 40px rgba(217, 218, 255, 0.5),
+      0px 0px 80px rgba(217, 218, 255, 0.5),
+      0px 0px 120px rgba(217, 218, 255, 0.5),
+      0px 0px 160px rgba(217, 218, 255, 0.5);
+    right: 8%;
+  }
+  &__content {
+    margin-top: 206px;
+    margin-left: min(80px, 7vw);
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    #{$root}__greetings {
+      @include setFont(var(--font18));
+    }
+    #{$root}__name {
+      text-transform: uppercase;
+      @include setFont(clamp(30px, 5vw, 48px), $fontFamily: $dancingScript);
+      margin-top: 10px;
+    }
+    #{$root}__profession {
+      @include setFont(clamp(24px, 3vw, 36px), $fontFamily: $lobster);
+      margin-top: 23px;
+    }
+    #{$root}__description {
+      @include setFont(var(--font18));
+      position: relative;
+      margin-top: 80px;
+      width: min(420px, 80vw);
+      @include webkit_line_clamp(2);
+    }
+    #{$root}__read-more {
+      margin-top: 20px;
+    }
+  }
+}

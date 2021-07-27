@@ -5,7 +5,7 @@
   $fontFamily: $roboto
 ) {
   @if ($fontSize) {
-    font-size: $fontSize + px;
+    font-size: $fontSize;
   }
   @if ($lineHeight) {
     line-height: $lineHeight;
@@ -14,4 +14,22 @@
     font-weight: $fontWeight;
   }
   font-family: $fontFamily;
+}
+@mixin webkit_line_clamp($line) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: $line;
+  -moz-line-clamp: $line;
+  -ms-line-clamp: $line;
+  line-clamp: $line;
+}
+
+@mixin sp() {
+  @media (max-width: $WIDTH-SP) {
+    @content;
+  }
 }

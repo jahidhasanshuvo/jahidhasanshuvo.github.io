@@ -1,12 +1,15 @@
 .a-nav-item {
-  @include setFont(16);
-  //   display: block;
+  display: inline-block;
   padding: 9px 30px;
   text-decoration: none;
   color: $white;
   background: rgba($white, 0.14);
   border-radius: 40px;
+  @include setFont(16);
   &--active {
     background: linear-gradient(90deg, #b81e1e, #7a0776);
+  }
+  &--read-more {
+    background: linear-gradient(90deg, #088fba, #9506c7);
   }
 }

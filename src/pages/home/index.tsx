@@ -5,7 +5,7 @@ import BlackHeroSection from "components/molecules/black-hero-section";
 const Home = () => {
   return (
     <div className="p-home">
-      <HeroSection></HeroSection>
+      <HeroSection />
       {/* <BlackHeroSection /> */}
     </div>
   );

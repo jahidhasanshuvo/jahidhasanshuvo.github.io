@@ -4,7 +4,7 @@ import { mapModifiers, ModifiersProp } from "helper/helper";
 
 type NavItemProps = {
   href: string;
-  modifier?: ModifiersProp<"active">;
+  modifier?: ModifiersProp<"active" | "read-more">;
 };
 
 const NavItem: React.FC<NavItemProps> = ({ href, modifier, children }) => {
