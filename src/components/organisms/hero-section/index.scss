@@ -1,18 +1,16 @@
 .o-hero-section {
   $root: &;
   position: relative;
+  height: 100vh;
   &__moon {
     $moonHeight: clamp(90px, 15vw, 180px);
     position: absolute;
     height: $moonHeight;
     width: $moonHeight;
-    background: $white;
     border-radius: 50%;
-    box-shadow: 0px 0px 40px rgba(217, 218, 255, 0.5),
-      0px 0px 80px rgba(217, 218, 255, 0.5),
-      0px 0px 120px rgba(217, 218, 255, 0.5),
-      0px 0px 160px rgba(217, 218, 255, 0.5);
     right: 8%;
+    background: url("assets/image/moon.png") 50%;
+    background-size: $moonHeight;
   }
   &__content {
     margin-top: 206px;
