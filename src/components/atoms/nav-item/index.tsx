@@ -8,10 +8,16 @@ type NavItemProps = {
 };
 
 const NavItem: React.FC<NavItemProps> = ({ href, modifier, children }) => {
-  return (
-    <Link to={href} className={mapModifiers("a-nav-item", modifier)}>
+  const link = href.startsWith("#") ? false : true;
+  const classname = mapModifiers("a-nav-item", modifier);
+  return link ? (
+    <Link to={href} className={classname}>
       {children}
     </Link>
+  ) : (
+    <a href={href} className={classname}>
+      {children}
+    </a>
   );
 };
 
