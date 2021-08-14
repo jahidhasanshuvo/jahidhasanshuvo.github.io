@@ -1,7 +1,7 @@
 .o-hero-section {
   $root: &;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   &__moon {
     $moonHeight: clamp(90px, 15vw, 180px);
     position: absolute;

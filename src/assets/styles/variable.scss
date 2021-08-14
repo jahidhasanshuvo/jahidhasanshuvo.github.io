@@ -2,9 +2,11 @@ $WIDTH-SP: 720px;
 :root {
   --font18: 18px;
   --font16: 16px;
+  --font40: 40px;
   @media (max-width: $WIDTH-SP) {
     --font18: 16px;
     --font16: 14px;
+    --font40: 30px;
   }
 }
 
