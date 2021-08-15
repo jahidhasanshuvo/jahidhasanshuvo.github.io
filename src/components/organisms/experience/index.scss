@@ -1,0 +1,49 @@
+.o-experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px 0;
+  overflow: hidden;
+  &__header-image {
+    height: 400px;
+    @include sp() {
+      height: 300px;
+    }
+  }
+  &__content {
+    position: relative;
+    background: rgba(#575c5e, 0.26);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    max-height: 468px;
+    border-radius: 40px;
+    padding: 20px 10px;
+    padding-top: 20px;
+    overflow-y: scroll;
+    @include sp() {
+      width: calc(100vw - 40px);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: $white;
+      width: 2px;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+
+    > .a-experience-item {
+      width: 50%;
+      &:not(:first-child) {
+        margin-top: 50px;
+      }
+    }
+  }
+}
