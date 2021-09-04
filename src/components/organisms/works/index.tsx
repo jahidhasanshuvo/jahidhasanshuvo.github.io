@@ -24,7 +24,7 @@ const pagination = {
 };
 const Works = () => {
   return (
-    <div className="o-works">
+    <section className="o-works">
       <div className="o-works__title">Works</div>
       <Swiper
         pagination={pagination}
@@ -54,7 +54,7 @@ const Works = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 };
 

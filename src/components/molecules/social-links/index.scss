@@ -1,0 +1,8 @@
+.m-social-links {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  &__link:not(:last-child) {
+    margin-right: 20px;
+  }
+}
