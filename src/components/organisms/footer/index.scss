@@ -1,0 +1,14 @@
+.o-footer {
+  height: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 50px;
+  @include sp() {
+    height: 72px;
+    flex-direction: column;
+    padding: 15px 0;
+  }
+}
